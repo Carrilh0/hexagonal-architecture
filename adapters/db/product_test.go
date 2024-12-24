@@ -52,7 +52,7 @@ func TestProductDb_Get(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, "Product Test", product.GetName())
 	require.Equal(t, 0.0, product.GetPrice())
-	require.Equal(t, "disabled", product.GetSatatus())
+	require.Equal(t, "disabled", product.GetStatus())
 }
 
 func TestProductDB_Save(t *testing.T) {
@@ -70,12 +70,12 @@ func TestProductDB_Save(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, product.Name, productResult.GetName())
 	require.Equal(t, product.Price, productResult.GetPrice())
-	require.Equal(t, product.Status, productResult.GetSatatus())
+	require.Equal(t, product.Status, productResult.GetStatus())
 
 	product.Status = "disabled"
 	productResult, err = productDb.Save(productResult)
 	require.Nil(t, err)
 	require.Equal(t, product.Name, productResult.GetName())
 	require.Equal(t, product.Price, productResult.GetPrice())
-	require.Equal(t, product.Status, productResult.GetSatatus())
+	require.Equal(t, product.Status, productResult.GetStatus())
 }

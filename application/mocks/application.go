@@ -104,18 +104,18 @@ func (mr *MockProductInterfaceMockRecorder) GetPrice() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPrice", reflect.TypeOf((*MockProductInterface)(nil).GetPrice))
 }
 
-// GetSatatus mocks base method.
-func (m *MockProductInterface) GetSatatus() string {
+// GetStatus mocks base method.
+func (m *MockProductInterface) GetStatus() string {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetSatatus")
+	ret := m.ctrl.Call(m, "GetStatus")
 	ret0, _ := ret[0].(string)
 	return ret0
 }
 
-// GetSatatus indicates an expected call of GetSatatus.
-func (mr *MockProductInterfaceMockRecorder) GetSatatus() *gomock.Call {
+// GetStatus indicates an expected call of GetStatus.
+func (mr *MockProductInterfaceMockRecorder) GetStatus() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSatatus", reflect.TypeOf((*MockProductInterface)(nil).GetSatatus))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStatus", reflect.TypeOf((*MockProductInterface)(nil).GetStatus))
 }
 
 // IsValid mocks base method.

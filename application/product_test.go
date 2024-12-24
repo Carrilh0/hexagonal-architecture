@@ -68,6 +68,6 @@ func TestProduct_Methods(t *testing.T) {
 
 	require.Equal(t, product.ID, product.GetId())
 	require.Equal(t, product.Name, product.GetName())
-	require.Equal(t, product.Status, product.GetSatatus())
+	require.Equal(t, product.Status, product.GetStatus())
 	require.Equal(t, product.Price, product.GetPrice())
 }

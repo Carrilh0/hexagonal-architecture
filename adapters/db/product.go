@@ -58,7 +58,7 @@ func (p *ProductDb) create(product application.ProductInterface) (application.Pr
 		product.GetId(),
 		product.GetName(),
 		product.GetPrice(),
-		product.GetSatatus(),
+		product.GetStatus(),
 	)
 
 	if err != nil {
@@ -77,7 +77,7 @@ func (p *ProductDb) update(product application.ProductInterface) (application.Pr
 	_, err := p.db.Exec("UPDATE products SET name = ?, price = ?, status = ? WHERE id = ?",
 		product.GetName(),
 		product.GetPrice(),
-		product.GetSatatus(),
+		product.GetStatus(),
 	)
 	if err != nil {
 		return nil, err
